@@ -6,16 +6,16 @@
 /*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 14:59:45 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/25 14:50:06 by fsewad           ###   ########.fr       */
+/*   Updated: 2026/09/29 16:26:24 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
+
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int		i;
-	char	*p;
+	char		*p;
+	size_t		i;
 
 	i = 0;
 	p = s;
@@ -26,7 +26,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (p);
 }
-/*
+
 int main()
 {
     char s[] = "wellcome to 42amman core ST";
@@ -39,4 +39,3 @@ int main()
     printf("%s " , s);
     return 0; 
 }
-*/

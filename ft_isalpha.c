@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/22 12:17:13 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/22 12:41:22 by fsewad           ###   ########.fr       */
+/*   Created: 2026/09/29 13:05:40 by fsewad            #+#    #+#             */
+/*   Updated: 2026/09/29 13:05:49 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*#include <stdio.h>
-#include <ctype.h>
-*/
+
+#include "libft.h"
+
 int	ft_isalpha(int input)
 {
 	if (input >= 97 && input <= 122 || input >= 65 && input <= 90)

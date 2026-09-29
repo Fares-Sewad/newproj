@@ -6,13 +6,12 @@
 /*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 14:35:53 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/22 14:37:23 by fsewad           ###   ########.fr       */
+/*   Updated: 2026/09/29 12:08:22 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-#include <stdio.h>
-#include <ctype.h>
-*/
+
+#include "libft.h"
+
 int	ft_isascii(int input)
 {
 	if (input >= 0 && input <= 127)

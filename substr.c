@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   substr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 11:10:49 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/29 12:10:58 by fsewad           ###   ########.fr       */
+/*   Created: 2026/09/29 14:27:22 by fsewad            #+#    #+#             */
+/*   Updated: 2026/09/29 18:09:40 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,41 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		*ptr++ = *sptr++;
 	return (ptr);
 }
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char		*ptr;
+	char		*src;
+	int			i;
+
+	src = (char *)s;
+	i = 0;
+	ptr = malloc (len * 1);
+	if (ptr == NULL)
+		return (NULL);
+	ft_memcpy(ptr, &src[start], len);
+	return (ptr);
+}
 /*
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+    char *ptr;
+    int i;
+
+    i = 0;
+    ptr = malloc (len * 1);
+    while (len--)
+    {
+        ptr[i] = s[start];
+        i++;
+        start++;
+    }
+    return (ptr);
+}
+
 int main()
 {
-    char src[] = "42 core student";
-    char dest[20] = "0";
-
-    ft_memcpy(dest,src,4);
-    //memcpy(dest,src,3);
-    printf("dest after = %s\n",dest);
+    char src[]= "wellcome to 42amman";
+    printf("%s",ft_substr(src,6,8));
 
 }*/

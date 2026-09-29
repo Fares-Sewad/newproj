@@ -6,14 +6,11 @@
 /*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 15:31:55 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/25 15:36:42 by fsewad           ###   ########.fr       */
+/*   Updated: 2026/09/29 12:08:38 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
-#include <string.h>
-#include <stdio.h>
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

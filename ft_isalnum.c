@@ -6,12 +6,11 @@
 /*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 14:26:35 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/22 14:26:36 by fsewad           ###   ########.fr       */
+/*   Updated: 2026/09/29 12:08:11 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libft.h"
 
 int	ft_isdigit(int input)
 {
@@ -23,7 +22,7 @@ int	ft_isdigit(int input)
 
 int	ft_isalpha(int input)
 {
-	if (input >= 97 && input <= 122 || input >= 65 && input <= 90)
+	if ((input >= 97 && input <= 122) || (input >= 65 && input <= 90))
 		return (1);
 	else
 		return (0);

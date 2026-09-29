@@ -1,43 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 11:10:53 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/29 12:08:52 by fsewad           ###   ########.fr       */
+/*   Created: 2026/09/29 11:10:59 by fsewad            #+#    #+#             */
+/*   Updated: 2026/09/29 18:09:56 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	const unsigned char	*sptr;
-	unsigned char		*ptr;
+	unsigned char	*sptr;
+	unsigned char	*ptr;
 
-	sptr = (const unsigned char *) src;
-	ptr = (unsigned char *) dest;
+	sptr = (unsigned char *) src;
+	ptr = dest;
 	if (!dest && !src)
-		return (NULL);
-	if (n > strlen(sptr))
 		return (NULL);
 	while (n--)
 		*ptr++ = *sptr++;
-	return (ptr);
+	return ((void *)ptr);
+}
+
+char	*ft_strdup(const char *s)
+{
+	unsigned char	*pt;
+	int				i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	pt = malloc(i * 1);
+	if (pt == NULL)
+		return (NULL);
+	ft_memcpy (pt, s, i);
+	return ((char *)pt);
 }
 /*
 int main()
 {
     char src[]="wellcome to 42amman";
-    char dest[30]= "fares";
-
-
-    printf("  %d  " , sizeof(dest));
-    ft_memmove(dest,src,16);
-    //memmove(dest,src,19);
-    printf("dest after : %s",dest);
-
-    return 0;
+    printf("%s\n",ft_strdup(src));
+    char srcc[]="wellcome to 42amman";
+    printf("%s",strdup(srcc));
 }*/

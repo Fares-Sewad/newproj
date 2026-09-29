@@ -3,60 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/16 10:15:59 by fsewad            #+#    #+#             */
-/*   Updated: 2026/06/16 10:17:25 by fsewad           ###   ########.fr       */
+/*   Created: 2026/09/29 11:11:44 by fsewad            #+#    #+#             */
+/*   Updated: 2026/09/29 12:07:54 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*#include <unistd.h>
-#include <stdio.h>
-*/
-int	trak(char *str)
+
+#include "libft.h"
+
+int	calcspaces(const char *nptr)
 {
-	int	c;
 	int	i;
 
-	c = 0;
 	i = 0;
-	while (str[i] <= '0')
-	{
-		if (str[i] == '-')
-			c++;
+	while (nptr[i] <= 32 && nptr[i] >= 0)
 		i++;
-	}
-	return (c);
+	return (i);
 }
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
-	int	x;
-	int	fi;
+	int	reval;
 
-	x = 0;
-	i = 0;
-	fi = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32
-		|| str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] <= '9' && str[i] >= '0')
+	reval = 0;
+	i = calcspaces(nptr);
+	while (nptr[i] >= 48 && nptr[i] <= 57)
 	{
-		x = str[i] - 48;
-		if (fi == 0)
-			fi = x;
-		if (str[i + 1] >= '0' && str[i + 1] <= '9')
-			fi = (fi * 10) + (str[i + 1] - 48);
-		else
-			break ;
+		reval = (reval * 10) + (nptr[i] - '0');
 		i++;
 	}
-	if (trak(str) % 2 == 0)
-		return (fi);
-	return (fi * -1);
+	return (reval);
 }
 /*
-int	main(void)
+int main()
 {
-	printf("%d\n", ft_atoi(" 	 	 ---+-1341/"));
-} //	cc -Wall -Wextra -Werror */
+    char *ptr="       0253fares2683";
+    printf("%d\n",ft_atoi(ptr));
+    char *pttr="       0253fares2683";
+    printf("%d\n",atoi(pttr));
+    return 0;
+}*/

@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 18:19:45 by fsewad            #+#    #+#             */
-/*   Updated: 2026/06/14 16:24:47 by fsewad           ###   ########.fr       */
+/*   Updated: 2026/09/29 12:09:14 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;

@@ -6,13 +6,12 @@
 /*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 13:04:38 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/22 13:05:36 by fsewad           ###   ########.fr       */
+/*   Updated: 2026/09/29 12:08:25 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-#include <stdio.h>
-#include <ctype.h>
-*/
+
+#include "libft.h"
+
 int	ft_isdigit(int input)
 {
 	if (input >= '0' && input <= '9')

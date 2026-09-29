@@ -1,39 +1,48 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/29 11:11:06 by fsewad            #+#    #+#             */
+/*   Updated: 2026/09/29 12:09:35 by fsewad           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <strings.h>
-#include <stdio.h>
-#include <ctype.h>
-#include <string.h>
+#include "libft.h"
 
-int size(const char *s)
+int	size(const char *s)
 {
-    int count = 0;
-    while (*s != '\0')
-    {   
-        count++;
-        s++;
-    }
-    return (count);
+	int	count;
+
+	count = 0;
+	while (*s != '\0')
+	{
+		count++;
+		s++;
+	}
+	return (count);
 }
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    char * ptr;
-    int i;
-    
-    i = size(s);
-    while (i >= 0)
-    {
-        if (s[i] == (char)c)
-              return ((char *)&s[i]);
-        i--;
-    }
-    return (NULL);
+	char		*ptr;
+	int			i;
+
+	i = size(s);
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i--;
+	}
+	return (NULL);
 }
- 
+/*
 int main()
 {
     const char src[]="wellcome to 42amman";
     printf("%s",ft_strrchr(src,'a'));
     //printf("%s",strchr(src,'c'));
-}
-   
+}*/

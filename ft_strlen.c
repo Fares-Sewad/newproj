@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/06 18:24:17 by fsewad            #+#    #+#             */
-/*   Updated: 2026/06/06 18:26:14 by fsewad           ###   ########.fr       */
+/*   Updated: 2026/09/29 12:09:23 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
 int	ft_strlen(char *str)
 {
 	int	count;

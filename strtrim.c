@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   strtrim.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 11:11:10 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/29 12:12:05 by fsewad           ###   ########.fr       */
+/*   Created: 2026/09/29 18:16:56 by fsewad            #+#    #+#             */
+/*   Updated: 2026/09/29 18:17:21 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+char *ft_strtrim(char const *s1, char const *set)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	return (c);
+    
 }
-/*
+
 int main()
 {
-    printf("before call : A \nafter call : %c\n**********\n", tolower(65));
-    printf("before call : A \nafter call : %c", ft_tolower(65));
-}*/
+    
+}
