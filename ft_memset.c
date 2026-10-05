@@ -14,28 +14,28 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char		*p;
-	size_t		i;
+	unsigned char	*p;
+	size_t			i;
 
+	p = (unsigned char *)s;
 	i = 0;
-	p = s;
 	while (i < n)
 	{
-		p[i] = c;
+		p[i] = (unsigned char)c;
 		i++;
 	}
-	return (p);
+	return (s);
 }
-
+/*
 int main()
 {
     char s[] = "wellcome to 42amman core ST";
     printf("%s \n\n*********\n" , s);
     
-    memset(s,'$',4);
+    memset(s,'0',4);
     printf("%s \n\n*********\n" , s);
     
-    ft_memset(s,'@',4);
+    ft_memset(s,'0',4);
     printf("%s " , s);
     return 0; 
-}
+}*/

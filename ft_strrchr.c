@@ -12,25 +12,11 @@
 
 #include "libft.h"
 
-int	size(const char *s)
-{
-	int	count;
-
-	count = 0;
-	while (*s != '\0')
-	{
-		count++;
-		s++;
-	}
-	return (count);
-}
-
 char	*ft_strrchr(const char *s, int c)
 {
-	char		*ptr;
-	int			i;
+	int	i;
 
-	i = size(s);
+	i = ft_strlen(s);
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)

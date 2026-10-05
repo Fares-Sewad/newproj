@@ -12,41 +12,36 @@
 
 #include "libft.h"
 
+#include <stddef.h>
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	char	*str;
-	char	*to_find;
 
-	str = (char *)big;
-	to_find = (char *)little;
+	if (!big && len == 0)
+		return (NULL);
+	if (little[0] == '\0')
+		return ((char *)big);
 	i = 0;
-	if (to_find[0] == '\0')
-		return (str);
-	while (len--)
+	while (big[i] != '\0' && i < len)
 	{
 		j = 0;
-		if (str[i] == to_find[0])
-		{
-			while (to_find[j] == str[i + j] && to_find[j] != '\0')
-			{
-				j++;
-				if (to_find[j] == '\0')
-					return (&str[i]);
-			}
-		}
+		while (big[i + j] == little[j] && (i + j) < len && little[j] != '\0')
+			j++;
+		if (little[j] == '\0')
+			return ((char *)&big[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-/*
+
 int	main(void)
 {
-	const char	src[] = "The most important function of";
-	const char	tf[] = "on";
+	const char	src[] = "abcdefgh";
+	const char	tf[] = "def";
 
-	printf("%s\n", ft_strnstr(src,tf,24));
+	printf("%s\n", ft_strnstr(src,tf,19));
 	
 	//printf("%s\n", strstr(s, f));
-}//	cc -Wall -Wextra -Werror   */
+}//	cc -Wall -Wextra -Werror   

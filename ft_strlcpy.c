@@ -31,15 +31,14 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	dest[j] = '\0';
 	return (i);
 }
-/*
+
 int	main(void)
 {
 #include <unistd.h>
 #include <stdio.h>
 	char	s[] = "42amman";
 	char	d[15];
-	int	siz;
-	
-	siz = 6;
-	printf("%u\n", ft_strlcpy(d, s, siz));
-}*/
+
+	//printf("%u\n", ft_strlcpy(d, s, 6));
+	printf("%u\n", ft_strlcpy(d, s, 6));
+}

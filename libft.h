@@ -12,7 +12,6 @@
 
 #ifndef LIB_H
 #define LIB_H
-
 #include <stdlib.h>
 #include <strings.h>
 #include <string.h>
@@ -42,7 +41,6 @@ int	ft_strlen(char *str);
 int	ft_strncmp(char *s1, char *s2, unsigned int n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
-int	size(const char *s);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
 char *ft_substr(char const *s, unsigned int start,size_t len);

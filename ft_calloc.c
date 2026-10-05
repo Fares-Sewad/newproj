@@ -12,19 +12,28 @@
 
 #include "libft.h"
 
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*ptr;
+
+	ptr = s;
+	while (n--)
+		*ptr++ = 0;
+}
+
 void	*ft_calloc(size_t nelem, size_t elsize)
 {
 	unsigned char	*ptr;
 	size_t			i;
 
 	i = 0;
+    if (nelem != 0 && elsize > ((size_t)-1) / nelem)
+		return (NULL);
 	ptr = malloc(nelem * elsize);
-	while (i < (nelem * elsize))
-	{
-		ptr[i] = 0;
-		i++;
-	}
-	return ((void *)ptr);
+	if (!ptr)
+        return (NULL);
+    ft_bzero(ptr,(nelem * elsize));    
+	return (ptr);
 }
 /*
 int main()

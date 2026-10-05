@@ -12,54 +12,28 @@
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
-{
-	const unsigned char	*sptr;
-	unsigned char		*ptr;
-
-	if (!dest && !src)
-		return (NULL);
-	sptr = (const unsigned char *) src;
-	ptr = dest;
-	while (n--)
-		*ptr++ = *sptr++;
-	return (ptr);
-}
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char		*ptr;
-	char		*src;
-	int			i;
+	char	*ptr;
+	size_t	slen;
 
-	src = (char *)s;
-	i = 0;
-	ptr = malloc (len * 1);
-	if (ptr == NULL)
+	if (!s)
 		return (NULL);
-	ft_memcpy(ptr, &src[start], len);
+	slen = ft_strlen((char *)s);
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len > slen - start)
+		len = slen - start;
+	ptr = (char *)malloc(len + 1);
+	if (!ptr)
+		return (NULL);
+	ft_strlcpy(ptr, (char *)&s[start], len + 1);
 	return (ptr);
 }
-/*
-char	*ft_substr(char const *s, unsigned int start, size_t len)
-{
-    char *ptr;
-    int i;
-
-    i = 0;
-    ptr = malloc (len * 1);
-    while (len--)
-    {
-        ptr[i] = s[start];
-        i++;
-        start++;
-    }
-    return (ptr);
-}
-
 int main()
 {
-    char src[]= "wellcome to 42amman";
-    printf("%s",ft_substr(src,6,8));
-
-}*/
+    char	*src;
+	src = ft_substr("hello", 10, 3);
+	printf("%s\n", src);
+	free(src);
+}
