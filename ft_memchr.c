@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/25 15:31:55 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/29 12:08:38 by fsewad           ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_memchr.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/25 15:31:55 by username         #+#    #+#              */
+/*   Updated: 2026/10/16 15:07:11 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,21 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	const unsigned char	*ptr;
 
 	i = 0;
-	ptr = (const unsigned char *)s;
+	ptr = (const unsigned char *) s;
 	while (i < n)
 	{
-		if (ptr[i] == (unsigned char)c)
-			return ((void *)&ptr[i]);
+		if (ptr[i] == (unsigned char) c)
+			return ((void *) & ptr[i]);
 		i++;
 	}
 	return (NULL);
 }
 
-int main()
+/*int main()
 {
-    const char src[] = "wellcome 42 amman core student";
-    char *s;
-    s = (char *)ft_memchr(src,'4', 10);
-    printf("%s",s);
-    return 0;
-}
+const char src[] = "wellcome 42 amman core student";
+char *s;
+s = (char *)ft_memchr(src,'4', 10);
+printf("%s",s);
+return 0;
+}*/

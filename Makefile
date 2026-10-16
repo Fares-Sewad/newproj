@@ -13,7 +13,7 @@
 NAME = libft.a
 
 CC =	gcc
-CFLAGS =	-Wall -Wextra -Werror 
+CFLAGS =	-Wall -Wextra -Werror
 
 SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
@@ -39,9 +39,9 @@ $(NAME): $(OBJS)
 
 .PHONY: all clean
 clean:
-	rm *.o 
+	del *.o 
 fclean: clean
-	rm *.a
+	del *.a
 
 re: fclean all
 

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/10 09:34:45 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/29 12:09:19 by fsewad           ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_strlcpy.c                                      :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/06/10 09:34:45 by username         #+#    #+#              */
+/*   Updated: 2026/10/16 15:46:03 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -31,14 +31,14 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	dest[j] = '\0';
 	return (i);
 }
-
+/*
 int	main(void)
 {
 #include <unistd.h>
 #include <stdio.h>
-	char	s[] = "42amman";
-	char	d[15];
+char	s[] = "42amman";
+char	d[15];
 
-	//printf("%u\n", ft_strlcpy(d, s, 6));
-	printf("%u\n", ft_strlcpy(d, s, 6));
-}
+//printf("%u\n", ft_strlcpy(d, s, 6));
+printf("%u\n", ft_strlcpy(d, s, 6));
+}*/

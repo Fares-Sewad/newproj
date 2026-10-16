@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/13 18:19:45 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/29 12:09:14 by fsewad           ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_strlcat.c                                      :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/06/13 18:19:45 by username         #+#    #+#              */
+/*   Updated: 2026/10/16 15:45:49 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	d;
@@ -42,15 +42,15 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 #include <bsd/string.h>
 int	main(void)
 {
-	char	s[] = "Hajeer";
-	char	d[] = "Hajeer";
-	//har	d1[] = "Hajeer";
-	printf("%u\n", ft_strlcat(d, s, 6));
-	printf("%s\n", d);
-	unsigned int	n;
-	
-	n = strlcat(d1, s, 6);
-	printf("%s\n",d1);
-	printf("%d\n", n );
-	
+char	s[] = "Hajeer";
+char	d[] = "Hajeer";
+//har	d1[] = "Hajeer";
+printf("%u\n", ft_strlcat(d, s, 6));
+printf("%s\n", d);
+unsigned int	n;
+
+n = strlcat(d1, s, 6);
+printf("%s\n",d1);
+printf("%d\n", n );
+
 }//	cc -Wall -Wextra -Werror*/

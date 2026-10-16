@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 13:05:40 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/29 13:05:49 by fsewad           ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_isalpha.c                                      :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/29 13:05:40 by username         #+#    #+#              */
+/*   Updated: 2026/10/16 15:22:30 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalpha(int input)
 {
-	if (input >= 97 && input <= 122 || input >= 65 && input <= 90)
+	if ((input >= 97 && input <= 122) || (input >= 65 && input <= 90))
 		return (1);
 	else
 		return (0);
@@ -22,6 +22,6 @@ int	ft_isalpha(int input)
 /*
 int main()
 {
-    printf(" is alpha = %d\n",ft_isalpha(100));
-    return 0;
+printf(" is alpha = %d\n",ft_isalpha(100));
+return 0;
 }*/

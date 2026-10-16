@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 11:10:59 by fsewad            #+#    #+#             */
-/*   Updated: 2026/09/29 18:09:56 by fsewad           ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_strdup.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/29 11:10:59 by username         #+#    #+#              */
+/*   Updated: 2026/10/08 23:32:28 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,18 @@ char	*ft_strdup(const char *s)
 	char	*pt;
 	size_t	len;
 
-	len = ft_strlen((char *)s);
-	pt = (char *)malloc(len + 1);
-	printf("#%d",ft_strlen(pt));
+	len = ft_strlen((char *) s);
+	pt = (char *) malloc(len + 1);
 	if (!pt)
 		return (NULL);
 	ft_memcpy(pt, s, len + 1);
 	return (pt);
 }
-
+/*
 int main()
 {
-    char src[]="wellcome to 42amman";
-    printf("%s\n",ft_strdup(src));
-    //char srcc[]="wellcome to 42amman";
-    //printf("%s",strdup(srcc));
-}
+char src[]="wellcome to 42amman";
+printf("%s\n",ft_strdup(src));
+//char srcc[]="wellcome to 42amman";
+//printf("%s",strdup(srcc));
+}*/
