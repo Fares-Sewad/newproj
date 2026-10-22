@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_lstclear.c                                     :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/16 15:01:29 by username         #+#    #+#              */
-/*   Updated: 2026/10/16 15:01:33 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/16 15:01:29 by username          #+#    #+#             */
+/*   Updated: 2026/10/22 14:27:39 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	delete(void *ptr)
-{
-	free(ptr);
-}
-
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list	*second, *head;
+	t_list	*second;
+	t_list	*head;
 
 	if (!lst || !del)
 		return ;
@@ -33,7 +29,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
-
 /*int	main(void)
 {
 t_list	*node1, *node2, *node3, *node4;
@@ -51,5 +46,10 @@ while (node1 != NULL)
 printf("# %s\n", (char *) node1->content);
 node1 = node1->next;
 }
+void	delete(void *ptr)
+{
+	free(ptr);
+}
+
 return (0);
 }*/

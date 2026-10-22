@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_calloc.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/09/29 11:11:40 by username         #+#    #+#              */
-/*   Updated: 2026/10/16 15:58:57 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/29 11:11:40 by username          #+#    #+#             */
+/*   Updated: 2026/10/22 16:29:12 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nelem, size_t elsize)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*ptr;
 
-	if (nelem != 0 && elsize > ((size_t) - 1) / nelem)
+	if (nmemb != 0 && size > ((size_t) - 1) / nmemb)
 		return (NULL);
-	ptr = malloc(nelem * elsize);
+	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, (nelem * elsize));
+	ft_bzero(ptr, (nmemb * size));
 	return (ptr);
 }
 /*

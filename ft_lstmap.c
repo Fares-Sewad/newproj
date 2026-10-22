@@ -1,47 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_lstmap.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/14 12:42:50 by username         #+#    #+#              */
-/*   Updated: 2026/10/16 16:50:24 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/14 12:42:50 by username          #+#    #+#             */
+/*   Updated: 2026/10/22 14:28:07 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	*lst_toupper(void *k)
-{
-	char	*src;
-	char	*dst;
-	int		i;
-
-	if (!k)
-		return (NULL);
-	src = (char *) k;
-	dst = malloc(ft_strlen(src) + 1);
-	if (!dst)
-		return (NULL);
-	i = 0;
-	while (src[i])
-	{
-		dst[i] = src[i];
-		if (dst[i] >= 'a' && dst[i] <= 'z')
-			dst[i] = dst[i] - 32;
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
-}
-
-void	delet(void *ptr)
-{
-	if (!ptr)
-		return ;
-	free(ptr);
-}
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -93,5 +62,40 @@ while (new != NULL)
 printf("$ %s\n", (char *) new->content);
 new = new->next;
 }
+
+
+
+void	*lst_toupper(void *k)
+{
+	char	*src;
+	char	*dst;
+	int		i;
+
+	if (!k)
+		return (NULL);
+	src = (char *) k;
+	dst = malloc(ft_strlen(src) + 1);
+	if (!dst)
+		return (NULL);
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src[i];
+		if (dst[i] >= 'a' && dst[i] <= 'z')
+			dst[i] = dst[i] - 32;
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
+}
+
+void	delet(void *ptr)
+{
+	if (!ptr)
+		return ;
+	free(ptr);
+}
+
+
 return (0);
 }*/

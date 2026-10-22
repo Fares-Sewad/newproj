@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_split.c                                        :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/16 15:09:26 by username         #+#    #+#              */
-/*   Updated: 2026/10/16 15:09:30 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/16 15:09:26 by username          #+#    #+#             */
+/*   Updated: 2026/10/22 16:54:08 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,24 +89,23 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (addrows(arr, s, c));
 }
+// int main(void)
+// {
+// char s[] = "fares,,,moh,ammed";
+// char **arr = ft_split(s, ',');
 
-/*int main(void)
-{
-char s[] = ",,,d,fares,,,mohammed,sewad,f";
-char **arr = ft_split(s, ',');
-
-int i = 0;
-printf("\n");
-while (arr[i] != NULL)
-{
-int j = 0;
-while (arr[i][j] != '\0')
-{
-printf("%c ", arr[i][j]);
-j++;
-}
-printf("\n");
-i++;
-}
-return (0);
-}*/
+// int i = 0;
+// printf("\n");
+// while (arr[i] != NULL)
+// {
+// int j = 0;
+// while (arr[i][j] != '\0')
+// {
+// printf("%c ", arr[i][j]);
+// j++;
+// }
+// printf("\n");
+// i++;
+// }
+// return (0);
+// }

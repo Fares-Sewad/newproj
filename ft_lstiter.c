@@ -1,31 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_lstiter.c                                      :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/16 15:01:55 by username         #+#    #+#              */
-/*   Updated: 2026/10/16 15:08:06 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/16 15:01:55 by username          #+#    #+#             */
+/*   Updated: 2026/10/22 14:27:46 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void	lst_toupper(void *k)
-{
-	char	*c;
-
-	if (!k)
-		return ;
-	c = k;
-	while (*c)
-	{
-		if (*c >= 97 && *c <= 122)
-			*c = *c - 32;
-		c++;
-	}
-}
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
@@ -37,7 +22,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-
 /*int	main(void)
 {
 t_list	*node1, *node2, *node3, *node4;
@@ -55,5 +39,21 @@ while (node1 != NULL)
 printf("# %s\n", (char *) node1->content);
 node1 = node1->next;
 }
+
+void	lst_toupper(void *k)
+{
+	char	*c;
+
+	if (!k)
+		return ;
+	c = k;
+	while (*c)
+	{
+		if (*c >= 97 && *c <= 122)
+			*c = *c - 32;
+		c++;
+	}
+}
+
 return (0);
 }*/
