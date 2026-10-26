@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fsewad <fsewad@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/16 15:09:26 by username          #+#    #+#             */
-/*   Updated: 2026/10/22 16:54:08 by fsewad           ###   ########.fr       */
+/*   Created: 2026/10/26 11:40:01 by fsewad            #+#    #+#             */
+/*   Updated: 2026/10/26 13:05:07 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	calcword(char const *s, char c)
+static int	calcword(char const *s, char c)
 {
 	int	i;
 	int	co;
@@ -37,57 +37,52 @@ int	calcword(char const *s, char c)
 	return (flag);
 }
 
-char	**free_all(char **arr, int count)
+static void	free_split(char **arr, int count)
 {
-	while (count >= 0)
-	{
-		free(arr[count]);
-		count--;
-	}
+	while (count > 0)
+		free(arr[--count]);
 	free(arr);
-	return (NULL);
 }
 
-char	**addrows(char **arr, char const *s, char c)
+static int	addrows(char **arr, char const *s, char c)
 {
 	int	i;
-	int	co;
-	int	flag;
+	int	start;
+	int	count;
 
-	flag = 0;
-	co = 0;
-	i = -1;
-	while (s[++i])
+	i = 0;
+	count = 0;
+	while (s[i])
 	{
-		if (s[i] != c)
-			co++;
-		else if (co > 0)
+		while (s[i] == c)
+			i++;
+		start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (i > start)
 		{
-			arr[flag] = ft_substr(s, i - co, co);
-			if (!arr[flag])
-				return (free_all(arr, flag - 1));
-			flag++;
-			co = 0;
+			arr[count] = ft_substr(s, start, i - start);
+			if (!arr[count])
+				return (free_split(arr, count), 0);
+			count++;
 		}
 	}
-	if (co > 0)
-		arr[flag++] = ft_substr(s, i - co, co);
-	arr[flag] = NULL;
-	return (arr);
+	arr[count] = NULL;
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
-	int		len;
 
 	if (!s)
 		return (NULL);
-	len = calcword(s, c);
-	arr = (char **) malloc((len + 1) * sizeof(char *));
+	arr = malloc(sizeof(char *) * (calcword(s, c) + 1));
 	if (!arr)
 		return (NULL);
-	return (addrows(arr, s, c));
+	if (!addrows(arr, s, c))
+		return (NULL);
+	return (arr);
 }
 // int main(void)
 // {

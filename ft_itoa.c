@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_itoa.c                                         :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/16 15:00:29 by username         #+#    #+#              */
-/*   Updated: 2026/10/16 15:00:30 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsewad <fsewad@student.42amman.com>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/26 11:35:13 by fsewad            #+#    #+#             */
+/*   Updated: 2026/10/26 13:04:13 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	calclength(long long num)
+static int	calclength(long long num)
 {
 	int	co;
 

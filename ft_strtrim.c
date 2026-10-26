@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_strtrim.c                                      :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/16 15:06:02 by username         #+#    #+#              */
-/*   Updated: 2026/10/16 16:00:13 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsewad <fsewad@student.42amman.com>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/26 11:43:02 by fsewad            #+#    #+#             */
+/*   Updated: 2026/10/26 13:05:40 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	end = ft_strlen((char *) s1);
+	end = ft_strlen(s1);
 	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
-	ptr = (char *) malloc(sizeof(char) * (end - start + 1));
+	ptr = malloc(sizeof(char) * (end - start + 1));
 	if (!ptr)
 		return (NULL);
-	ft_strlcpy(ptr, (char *) & s1[start], end - start + 1);
+	ft_strlcpy(ptr, &s1[start], end - start + 1);
 	return (ptr);
 }
 /*

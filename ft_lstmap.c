@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fsewad <fsewad@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/14 12:42:50 by username          #+#    #+#             */
-/*   Updated: 2026/10/22 14:28:07 by fsewad           ###   ########.fr       */
+/*   Created: 2026/10/26 11:37:35 by fsewad            #+#    #+#             */
+/*   Updated: 2026/10/26 13:04:30 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	void	*temp;
 
 	head = NULL;
+	last = NULL;
 	if (!f || !del)
 		return (NULL);
 	while (lst)

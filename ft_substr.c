@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_substr.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/16 15:05:50 by username         #+#    #+#              */
-/*   Updated: 2026/10/16 15:05:50 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsewad <fsewad@student.42amman.com>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/26 11:43:13 by fsewad            #+#    #+#             */
+/*   Updated: 2026/10/26 13:05:42 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	slen = ft_strlen((char *) s);
+	slen = ft_strlen(s);
 	if (start >= slen)
 		return (ft_strdup(""));
 	if (len > slen - start)
 		len = slen - start;
-	ptr = (char *) malloc(len + 1);
+	ptr = malloc(len + 1);
 	if (!ptr)
 		return (NULL);
-	ft_strlcpy(ptr, (char *) & s[start], len + 1);
+	ft_strlcpy(ptr, &s[start], len + 1);
 	return (ptr);
 }
 /*int main()

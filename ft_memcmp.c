@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fsewad <fsewad@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 11:11:31 by fsewad            #+#    #+#             */
-/*   Updated: 2026/10/22 17:47:48 by fsewad           ###   ########.fr       */
+/*   Created: 2026/10/26 11:38:15 by fsewad            #+#    #+#             */
+/*   Updated: 2026/10/26 13:04:46 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/09/29 11:11:23 by fsewad            #+#    #+#              #
-#    Updated: 2026/10/22 13:43:18 by fsewad           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME = libft.a
 
 CC = cc
@@ -32,11 +20,9 @@ HEADER = libft.h
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@echo "Creating library..."
 	ar rcs $(NAME) $(OBJS)
 
 %.o: %.c $(HEADER)
-	@echo "Compiling $<"
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
