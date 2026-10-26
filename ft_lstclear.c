@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fsewad <fsewad@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/16 15:01:29 by username          #+#    #+#             */
-/*   Updated: 2026/10/22 14:27:39 by fsewad           ###   ########.fr       */
+/*   Created: 2026/10/26 11:36:27 by fsewad            #+#    #+#             */
+/*   Updated: 2026/10/26 18:19:47 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
+
 /*int	main(void)
 {
 t_list	*node1, *node2, *node3, *node4;
@@ -40,12 +41,9 @@ node4 = ft_lstnew(ft_strdup("70"));
 node1->next = node2;
 node2->next = node3;
 node3->next = node4;
-ft_lstclear(&node1, delete);
-while (node1 != NULL)
-{
-printf("# %s\n", (char *) node1->content);
-node1 = node1->next;
-}
+ 
+ft_lstclear(&node1,delete);
+
 void	delete(void *ptr)
 {
 	free(ptr);

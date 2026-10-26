@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_strjoin.c                                      :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/10/16 15:04:15 by username         #+#    #+#              */
-/*   Updated: 2026/10/16 15:59:10 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsewad <fsewad@student.42amman.com>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/26 11:41:03 by fsewad            #+#    #+#             */
+/*   Updated: 2026/10/26 13:05:17 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	len1 = ft_strlen((char *) s1);
 	len2 = ft_strlen((char *) s2);
-	ptr = (char *) malloc(len1 + len2 + 1);
+	ptr = malloc(len1 + len2 + 1);
 	if (!ptr)
 		return (NULL);
 	ft_memcpy(ptr, s1, len1);

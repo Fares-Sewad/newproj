@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fsewad <fsewad@student.42.fr>              +#+  +:+       +#+        */
+/*   By: fsewad <fsewad@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/13 18:19:45 by username          #+#    #+#             */
-/*   Updated: 2026/10/22 16:28:33 by fsewad           ###   ########.fr       */
+/*   Created: 2026/10/26 11:41:18 by fsewad            #+#    #+#             */
+/*   Updated: 2026/10/26 13:05:20 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	i = 0;
 	while (src[i] != '\0')
 		i++;
-	while (dest[d] != '\0')
+	while (d < size && dest[d] != '\0')
 		d++;
-	if (size <= d)
+	if (d == size)
 		return (size + i);
 	while (src[j] != '\0' && j < (size - 1) - d)
 	{
@@ -43,9 +43,9 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 int	main(void)
 {
 char	s[] = "Hajeer";
-char	d[] = "Hajeer";
+char	d[] = "Haj";
 //har	d1[] = "Hajeer";
-printf("%u\n", ft_strlcat(d, s, 6));
+printf("%u\n", ft_strlcat(d, s, 8));
 printf("%s\n", d);
 unsigned int	n;
 

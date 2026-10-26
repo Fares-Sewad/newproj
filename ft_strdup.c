@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_strdup.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/09/29 11:10:59 by username         #+#    #+#              */
-/*   Updated: 2026/10/08 23:32:28 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fsewad <fsewad@student.42amman.com>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/26 11:40:32 by fsewad            #+#    #+#             */
+/*   Updated: 2026/10/26 13:05:12 by fsewad           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	size_t	len;
 
 	len = ft_strlen((char *) s);
-	pt = (char *) malloc(len + 1);
+	pt = malloc(len + 1);
 	if (!pt)
 		return (NULL);
 	ft_memcpy(pt, s, len + 1);
